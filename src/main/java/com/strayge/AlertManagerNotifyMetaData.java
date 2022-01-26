@@ -41,8 +41,7 @@ public class AlertManagerNotifyMetaData implements PluginMetaData {
 
     @Override
     public String getDescription() {
-        // TODO Insert correct plugin description
-        return "Description of AlertManagerNotify plugin";
+        return "Send alerts to the Prometheus AlertManager API.";
     }
 
     @Override
