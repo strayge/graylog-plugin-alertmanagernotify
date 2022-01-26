@@ -16,7 +16,7 @@ jobs:
       - name: Install dependencies
         run: |
           sudo apt-get -y install libxml2-utils
-      - name: Graylog version
+      - name: Set variables
         run: |
           export GRAYLOG_VERSION=$(xmllint --xpath '/*[local-name()="project"]/*[local-name()="parent"]/*[local-name()="version"]/text()' pom.xml)
           export CACHE_DATE=$(/bin/date -u "+%Y%m%d")
