@@ -1,10 +1,10 @@
 # AlertManagerNotify Plugin for Graylog
 
-[![Build Status](https://travis-ci.org/graylog-plugin-alertmanagernotify.svg?branch=master)](https://travis-ci.org/graylog-plugin-alertmanagernotify)
+[![Build Status](https://github.com/strayge/graylog-plugin-alertmanagernotify/actions/workflows/build.yml/badge.svg)](https://github.com/strayge/graylog-plugin-alertmanagernotify/actions?query=branch%3Amaster+workflow%3Abuild)
 
-__Use this paragraph to enter a description of your plugin.__
+This plugin can be used for connecting [Graylog](https://www.graylog.org/) alerts to the [Prometheus](https://prometheus.io/) [AlertManager](https://prometheus.io/docs/alerting/alertmanager/).
 
-**Required Graylog version:** 2.0 and later
+**Required Graylog version:** 4.0 and later
 
 Installation
 ------------
@@ -19,40 +19,4 @@ Restart `graylog-server` and you are done.
 Development
 -----------
 
-You can improve your development experience for the web interface part of your plugin
-dramatically by making use of hot reloading. To do this, do the following:
-
-* `git clone https://github.com/Graylog2/graylog2-server.git`
-* `cd graylog2-server/graylog2-web-interface`
-* `ln -s $YOURPLUGIN plugin/`
-* `npm install && npm start`
-
-Usage
------
-
-__Use this paragraph to document the usage of your plugin__
-
-
-Getting started
----------------
-
-This project is using Maven 3 and requires Java 8 or higher.
-
-* Clone this repository.
-* Run `mvn package` to build a JAR file.
-* Optional: Run `mvn jdeb:jdeb` and `mvn rpm:rpm` to create a DEB and RPM package respectively.
-* Copy generated JAR file in target directory to your Graylog plugin directory.
-* Restart the Graylog.
-
-Plugin Release
---------------
-
-We are using the maven release plugin:
-
-```
-$ mvn release:prepare
-[...]
-$ mvn release:perform
-```
-
-This sets the version numbers, creates a tag and pushes to GitHub. Travis CI will build the release artifacts and upload to GitHub automatically.
+Check [./development](./development/) for detailed build instructions.
