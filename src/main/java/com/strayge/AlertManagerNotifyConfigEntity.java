@@ -1,14 +1,16 @@
 package com.strayge;
 
+import java.util.Map;
+
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.google.auto.value.AutoValue;
+
 import org.graylog.events.contentpack.entities.EventNotificationConfigEntity;
 import org.graylog.events.notifications.EventNotificationConfig;
-import org.graylog2.contentpacks.model.entities.references.ValueReference;
 import org.graylog2.contentpacks.model.entities.EntityDescriptor;
-import java.util.Map;
+import org.graylog2.contentpacks.model.entities.references.ValueReference;
 
 @AutoValue
 @JsonTypeName(AlertManagerNotifyConfigEntity.TYPE_NAME)

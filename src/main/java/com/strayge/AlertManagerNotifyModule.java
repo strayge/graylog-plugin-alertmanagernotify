@@ -1,10 +1,10 @@
 package com.strayge;
 
-import org.graylog2.plugin.PluginConfigBean;
-import org.graylog2.plugin.PluginModule;
-
 import java.util.Collections;
 import java.util.Set;
+
+import org.graylog2.plugin.PluginConfigBean;
+import org.graylog2.plugin.PluginModule;
 
 /**
  * Extend the PluginModule abstract class here to add you plugin to the system.

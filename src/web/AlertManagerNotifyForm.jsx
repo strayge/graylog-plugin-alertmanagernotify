@@ -53,7 +53,7 @@ class AlertManagerNotifyForm extends React.Component {
                label="Alert Name"
                type="text"
                bsStyle={validation.errors.alert_name ? 'error' : null}
-               help={lodash.get(validation, 'errors.alert_name[0]', 'Alert Name')}
+               help={lodash.get(validation, 'errors.alert_name[0]', 'Will be transmitted as "alertname" label')}
                value={config.alert_name || ''}
                onChange={this.handleChange}
                required />
@@ -62,7 +62,10 @@ class AlertManagerNotifyForm extends React.Component {
                label="Labels"
                type="text"
                bsStyle={validation.errors.labels ? 'error' : null}
-               help={lodash.get(validation, 'errors.labels[0]', 'Custom labels.')}
+               help={lodash.get(
+                 validation, 'errors.labels[0]',
+                 'The custom AlertManager label key-value-pairs separated by ";". Ex.: name1=value1;name2=value2'
+               )}
                value={config.labels || ''}
                onChange={this.handleChange} />
         <Input id="notification-annotations"
@@ -70,7 +73,10 @@ class AlertManagerNotifyForm extends React.Component {
                label="Annotations"
                type="text"
                bsStyle={validation.errors.annotations ? 'error' : null}
-               help={lodash.get(validation, 'errors.annotations[0]', 'Custom annotations.')}
+               help={lodash.get(
+                 validation, 'errors.annotations[0]',
+                 'The custom AlertManager annotation key-value-pairs separated by ";". Ex.: name1=value1;name2=value2'
+               )}
                value={config.annotations || ''}
                onChange={this.handleChange} />
         <Input id="notification-grace"
@@ -78,7 +84,7 @@ class AlertManagerNotifyForm extends React.Component {
                label="Grace period"
                type="text"
                bsStyle={validation.errors.grace ? 'error' : null}
-               help={lodash.get(validation, 'errors.grace[0]', 'Grace period (in minutes).')}
+               help={lodash.get(validation, 'errors.grace[0]', 'Amount of minutes before alert ends after it starts')}
                value={config.grace || ''}
                onChange={this.handleChange} />
       </>
