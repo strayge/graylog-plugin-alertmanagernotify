@@ -44,6 +44,13 @@ Then, update (clone or checkout) your local graylog2-server as shown in "Prepare
 yarn upgrade
 ```
 
+
+# Build plugin in Docker
+
+```sh
+./build.sh
+```
+
 # Troubleshooting
 
 ## class file has wrong version
