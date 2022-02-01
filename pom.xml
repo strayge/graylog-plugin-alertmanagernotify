@@ -102,6 +102,7 @@
     </dependencies>
 
     <build>
+        <finalName>${project.artifactId}</finalName>
         <resources>
             <resource><directory>${web.build-dir}</directory></resource>
             <resource>
